@@ -1,0 +1,96 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; // Space between text and image
+  padding: 50px;
+  background-image: url("/images/bghero.jpg"); // Correct path to the image
+  background-size: cover; // Make sure the image covers the section
+  background-position: center; // Center the image
+  background-repeat: no-repeat; // Prevent repeating of the image
+  height: 120vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+}
+
+.text-container {
+  max-width: 50%; // Limit width of text container
+  min-width: 330px; /* Ensure minimum width to accommodate text */
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .typing-text {
+    font-size: 2rem; // Adjust font size
+    font-weight: bolder;
+    color: #e31b6d; // Adjust color as needed
+    white-space: nowrap; // Prevent wrapping
+    overflow: hidden;
+  }
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e31b6d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #d02a5b;
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+
+  .social-icon {
+    font-size: 1.5rem;
+    color: #e31b6d;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #d02a5b;
+    }
+  }
+  @media (max-width: 768px) {
+    display: flex; // Stack icons vertically on small screens
+    justify-content: center; // Center icons horizontally
+    gap: 10px; // Space between icons
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 270px;
+  height: 300px; // Adjust size as needed
+  flex-shrink: 0; /* Prevent shrinking */
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.round-image {
+  border-radius: 30%;
+}

@@ -1,0 +1,92 @@
+.contact {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background-color: black;
+  color: white;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #d02a5b;
+
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.contact-form {
+  margin-top: 30px;
+  background-color: #222; /* Dark background for the form */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #d02a5b; /* Change to your desired placeholder text color */
+  opacity: 1; /* Ensure the placeholder text is fully opaque */
+}
+
+.contact-form button {
+  background-color: #d02a5b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a0284f;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+// transition css
+// .contact-title {
+//   opacity: 0;
+//   transform: translateY(-20px);
+//   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+// }
+
+// .contact {
+//   opacity: 0;
+//   transform: translateY(-20px);
+//   transition: opacity 3s ease-out, transform 0.6s ease-out;
+// }
+// .formgroup {
+//   opacity: 0;
+//   transform: translateY(-20px);
+//   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+// }
+
+// .visible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }

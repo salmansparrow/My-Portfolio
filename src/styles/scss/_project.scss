@@ -1,0 +1,131 @@
+.project {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background-color: black;
+  color: white;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #d02a5b;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  margin-bottom: 2rem;
+}
+
+.cv-download-container {
+  text-align: center;
+  margin-top: 2rem; /* Space between projects and button */
+}
+
+.cv-download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #d02a5b;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cv-download-btn:hover {
+  background-color: #a0284f;
+}
+
+.project-item {
+  margin-bottom: 30px; /* Add space between the projects vertically */
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 70%;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-image-container:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #e31b6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay .btn:hover {
+  background-color: #d02a5b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-image-container img {
+    width: 100%;
+  }
+}
+
+.project-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #e31b6d; /* Adjust color as needed */
+  text-align: center;
+  font-weight: bold;
+}
+
+// transition css
+.project-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-item {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 3s ease-out, transform 0.6s ease-out;
+}
+.cv-download-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

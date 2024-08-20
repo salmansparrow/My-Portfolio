@@ -1,0 +1,70 @@
+.footer {
+  font-weight: 600 !important;
+  background-color: #14191b;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-title h2 {
+  font-weight: 600 !important;
+  margin-bottom: 2rem;
+  font-size: 2rem; /* Adjust font size for smaller screens */
+}
+
+.footer-icons {
+  margin-bottom: 2rem; /* Add margin to separate icons from the bottom text */
+}
+
+.footer-icons a {
+  margin-right: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+
+.footer-icons a:hover {
+  transform: scale(1.1); /* Scale icons slightly on hover */
+}
+
+.footer-bottom p {
+  margin-top: 50px;
+  font-size: 1rem; /* Adjust font size for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-icons a {
+    margin-right: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.875rem;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title h2 {
+    font-size: 1.25rem;
+  }
+
+  .footer-icons {
+    margin-bottom: 1rem;
+  }
+
+  .footer-icons a {
+    margin-right: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }
+}
