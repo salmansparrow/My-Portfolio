@@ -7,7 +7,7 @@
   background-size: cover; // Make sure the image covers the section
   background-position: center; // Center the image
   background-repeat: no-repeat; // Prevent repeating of the image
-  height: 120vh;
+  height: 100vh;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -27,12 +27,12 @@
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
   }
 
   .typing-text {
-    font-size: 2rem; // Adjust font size
+    font-size: 2.5rem; // Adjust font size
     font-weight: bolder;
     color: #e31b6d; // Adjust color as needed
     white-space: nowrap; // Prevent wrapping

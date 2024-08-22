@@ -37,7 +37,7 @@ function MainNavbar(args) {
                 <NavLink href="#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#skils">Skills</NavLink>
+                <NavLink href="#skills">Skills</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#project">Projects</NavLink>
