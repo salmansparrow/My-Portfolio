@@ -13,7 +13,8 @@
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    height: auto;
+    height: 100vh;
+    background-size: cover;
   }
 }
 
@@ -29,6 +30,9 @@
   h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 2.5rem; /* Adjust font size for small screens */
+    }
   }
 
   .typing-text {
@@ -37,6 +41,13 @@
     color: #e31b6d; // Adjust color as needed
     white-space: nowrap; // Prevent wrapping
     overflow: hidden;
+    width: 400px; /* Set a fixed width to prevent shrinking */
+    // text-align: left; /* Ensure text alignment stays consistent */
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem; /* Adjust font size for small screens */
+      width: 100%; /* Allow the text to use full width on smaller screens */
+    }
   }
 }
 
