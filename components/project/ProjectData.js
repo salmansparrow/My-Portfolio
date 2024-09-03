@@ -4,6 +4,7 @@ import projectImage3 from "/public/images/textutills.png"; // Placeholder for yo
 import projectImage4 from "/public/images/haircare.png"; // Placeholder for your project image
 import projectImage6 from "/public/images/vehicleproject.png"; // Placeholder for your project image
 import projectImage5 from "/public/images/tindog.png"; // Placeholder for your project image
+import projectImage7 from "/public/images/tictactoe.png"; // Placeholder for your project image
 
 const projects = [
   {
@@ -47,6 +48,13 @@ const projects = [
     siteLink: "https://vehiclesproject.vercel.app/",
     codeLink: "https://github.com/salmansparrow/vehiclesproject",
     projectname: "Vehicles Project",
+  },
+  {
+    id: 7,
+    image: projectImage7,
+    siteLink: "https://tictactoe-nu-three.vercel.app//",
+    codeLink: "https://github.com/salmansparrow/TicTaeToe",
+    projectname: "Tic Tac Toe Game",
   },
 ];
 

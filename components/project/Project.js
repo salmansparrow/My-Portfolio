@@ -1,10 +1,12 @@
 import { Col, Container, Row } from "reactstrap";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import projects from "./ProjectData";
 import Link from "next/link";
 
 function Project() {
+  const [activeProject, setActiveProject] = useState(null);
+
   useEffect(() => {
     const elementsToObserve = [
       ...document.querySelectorAll(".project-item"),
@@ -36,6 +38,15 @@ function Project() {
     };
   }, []);
 
+  const handleTouch = (id) => {
+    if (activeProject === id) {
+      // If the same project is touched again, open the link (allow default behavior)
+      setActiveProject(null);
+      return;
+    }
+    setActiveProject(id);
+  };
+
   return (
     <>
       <section className="project" id="project">
@@ -49,6 +60,7 @@ function Project() {
                 sm={12}
                 key={project.id}
                 className="project-item"
+                onTouchStart={() => handleTouch(project.id)}
               >
                 <div className="project-image-container">
                   <Image
@@ -56,7 +68,13 @@ function Project() {
                     alt={`Project ${project.id}`}
                     layout="responsive"
                   />
-                  <div className="overlay">
+
+                  <div
+                    className={`overlay ${
+                      activeProject === project.id ? "show" : ""
+                    }`}
+                  >
+                    {" "}
                     <a
                       href={project.siteLink}
                       target="_blank"

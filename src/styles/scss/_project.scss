@@ -52,7 +52,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.project-image-container:hover img {
+.project-image-container:hover img,
+.overlay.show img {
   transform: scale(1.1);
 }
 
@@ -68,10 +69,13 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Prevent clicking the overlay by default */
 }
 
-.project-image-container:hover .overlay {
+.project-image-container:hover .overlay,
+.overlay.show {
   opacity: 1;
+  pointer-events: all; /* Enable clicking when visible */
 }
 
 .overlay .btn {
@@ -96,6 +100,11 @@
 
   .project-image-container img {
     width: 100%;
+  }
+
+  .overlay {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px;
   }
 }
 
