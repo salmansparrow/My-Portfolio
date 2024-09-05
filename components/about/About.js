@@ -20,11 +20,15 @@ function About() {
                 <div className="about-text">
                   <h2>Hello</h2>
                   <p>
-                    Hard working Web Developer student from Aptech. I'm also a
-                    former It Administrator and a future full stack developer.
-                    I’ve found my passion in web development. I love spending
-                    time coding and encountering new challenges. I’m highly
-                    adaptable to new challenges and projects.
+                    As a dedicated web developer with a rich background in IT
+                    administration, I bring a unique blend of technical
+                    expertise and a passion for crafting exceptional digital
+                    experiences. My journey in web development has ignited a
+                    deep enthusiasm for coding and tackling complex challenges.
+                    I thrive on embracing new technologies and am highly
+                    adaptable to evolving projects and environments. I am eager
+                    to leverage my skills and experience to contribute to
+                    dynamic and innovative web development projects.
                   </p>
                 </div>
               </Col>
