@@ -21,7 +21,10 @@ function MainNavbar(args) {
   return (
     <>
       <div>
-        <Navbar className="navbar" expand="lg" {...args}>
+        <Navbar className="navbar" expand="lg" fixed="top" {...args}>
+          <NavbarBrand href="/" className="navlogo">
+            SALMAN
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} className="ms-auto NavbarToggler">
             <Hamburger />
             {/* Use Hamburger component directly here */}

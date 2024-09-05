@@ -8,6 +8,7 @@
   background-position: center; // Center the image
   background-repeat: no-repeat; // Prevent repeating of the image
   height: 100vh;
+  margin-top: 50px;
 
   @media (max-width: 768px) {
     flex-direction: column;

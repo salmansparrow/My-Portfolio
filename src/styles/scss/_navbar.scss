@@ -1,5 +1,7 @@
 .navbar {
   background-color: rgb(33, 37, 41) !important;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .NavbarToggler {
@@ -12,6 +14,14 @@
   stroke: #ffffff; /* Set the color of the lines */
 }
 
+.navlogo {
+  color: #e31b6d;
+  font-weight: bold;
+  // margin-left: 20px;
+  &:hover {
+    color: #e31b6d;
+  }
+}
 .navbar-nav .nav-link {
   color: #ffffff94 !important; /* Default text color */
   text-transform: uppercase;
