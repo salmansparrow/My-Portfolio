@@ -21,7 +21,7 @@ function MainNavbar(args) {
   return (
     <>
       <div>
-        <Navbar className="navbar" expand="lg" fixed="top" {...args}>
+        <Navbar className="navbar" expand="md" fixed="top" {...args}>
           <NavbarBrand href="/" className="navlogo">
             SALMAN
           </NavbarBrand>

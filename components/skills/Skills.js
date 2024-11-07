@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 
 function Skills() {
   const skills = [
-    { name: "Next.js", level: "80" },
+    { name: "Next.js", level: "100" },
+    { name: "JavaScript", level: "85%" },
     { name: "HTML", level: "100%" },
-    { name: "CSS", level: "100%" },
-    { name: "Sass", level: "100%" },
-    { name: "Tailwind", level: "50%" },
+    { name: "CSS (Sass)", level: "100%" },
+    { name: "Material UI", level: "80%" },
     { name: "Redux", level: "70%" },
-    { name: "MongoDB", level: "70%" },
-    { name: "SQLite3", level: "80%" },
+    { name: "MongoDB", level: "50%" },
+    { name: "SQLite3", level: "60%" },
     { name: "GitHub", level: "100%" },
     { name: "Vercel", level: "100%" },
   ];
