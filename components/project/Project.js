@@ -24,7 +24,7 @@ function Project() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     elementsToObserve.forEach((element) => {
@@ -99,7 +99,7 @@ function Project() {
           </Row>
           <div className="cv-download-container">
             <Link
-              href="https://drive.google.com/file/d/112jHfcmn_MbX16Aku2VOBMoASxSdgXek/view" // Replace with your CV path
+              href="https://drive.google.com/uc?export=download&id=1t2eCpmrhfMNYT-GMr8NI3tbWMVLPsk8-" // Replace with your CV path
               target="_blank" // Opens in a new tab
               rel="noopener noreferrer" // Security best practice
               className="cv-download-btn"

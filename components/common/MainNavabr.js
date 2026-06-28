@@ -32,7 +32,7 @@ function MainNavbar(args) {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="navbar-nav mx-auto " navbar>
               <NavItem>
-                <NavLink href="/" className="active">
+                <NavLink href="#home" className="active">
                   Home
                 </NavLink>
               </NavItem>

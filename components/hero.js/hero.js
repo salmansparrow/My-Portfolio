@@ -23,7 +23,12 @@ function HeroSection() {
         <h6 className="typing-text">
           <Typewriter
             options={{
-              strings: ["Web Developer", "Footballer", "Addict Video Games"],
+              strings: [
+                "Web Developer",
+                "IT Officer",
+                "Footballer",
+                "Addict Video Games",
+              ],
               autoStart: true,
               loop: true,
             }}
