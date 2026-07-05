@@ -16,13 +16,12 @@ function About() {
                 <Image
                   src={image}
                   alt="Salman"
-                  width={350}
-                  height={350}
+                  width={280}
+                  height={260}
                   priority
                   quality={100}
                   style={{
                     objectFit: "cover",
-                    borderRadius: "50%",
                   }}
                 />
               </div>
