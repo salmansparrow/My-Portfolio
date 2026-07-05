@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import image from "/public/images/myimage.png";
 import Link from "next/link";
 import LinkedinIcon from "./LinkedinIcons";
 import GithubIcon from "./GithubIcon";

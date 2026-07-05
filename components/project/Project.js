@@ -99,7 +99,7 @@ function Project() {
           </Row>
           <div className="cv-download-container">
             <Link
-              href="https://drive.google.com/uc?export=download&id=1t2eCpmrhfMNYT-GMr8NI3tbWMVLPsk8-" // Replace with your CV path
+              href="/cv/Salman_Khan_CV.pdf" // Replace with your CV path
               target="_blank" // Opens in a new tab
               rel="noopener noreferrer" // Security best practice
               className="cv-download-btn"

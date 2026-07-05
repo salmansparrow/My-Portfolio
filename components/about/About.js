@@ -1,50 +1,7 @@
-// import Image from "next/image";
-// import { Col, Container, Row } from "reactstrap";
-// import image from "/public/images/myimage.png";
-
-// function About() {
-//   return (
-//     <>
-//       <section className="about" id="about">
-//         <h2 className="about-title"> About</h2>
-
-//         <div>
-//           <Container>
-//             <Row>
-//               <Col lg={5} md={6}>
-//                 <div className="about-image">
-//                   <Image src={image} height={500} />
-//                 </div>
-//               </Col>
-//               <Col lg={7} md={6}>
-//                 <div className="about-text">
-//                   <h2>Hello</h2>
-//                   <p>
-//                     As a dedicated web developer with a rich background in IT
-//                     administration, I bring a unique blend of technical
-//                     expertise and a passion for crafting exceptional digital
-//                     experiences. My journey in web development has ignited a
-//                     deep enthusiasm for coding and tackling complex challenges.
-//                     I thrive on embracing new technologies and am highly
-//                     adaptable to evolving projects and environments. I am eager
-//                     to leverage my skills and experience to contribute to
-//                     dynamic and innovative web development projects.
-//                   </p>
-//                 </div>
-//               </Col>
-//             </Row>
-//           </Container>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
-// export default About;
-
 import Image from "next/image";
 import { Col, Container, Row } from "reactstrap";
-import image from "/public/images/myimage.png";
+// import image from "/public/images/portfolio.jpg";
+import image from "/public/images/portfolio.jpg"; // ✅
 
 function About() {
   return (
@@ -59,18 +16,22 @@ function About() {
                 <Image
                   src={image}
                   alt="Salman"
-                  width={140}
-                  height={160}
-                  style={{ objectFit: "cover" }}
+                  width={350}
+                  height={350}
+                  priority
+                  quality={100}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "50%",
+                  }}
                 />
               </div>
               <h3 className="about-name">Salman</h3>
               <p className="about-role">Full Stack Web Developer</p>
               <div className="about-badges">
                 <span>Next.js</span>
-                <span>React</span>
-                <span>Node.js</span>
                 <span>IT Officer</span>
+                <span>Node.js</span>
               </div>
               <div className="about-socials">
                 <a
@@ -147,7 +108,7 @@ function About() {
 
               {/* CV Button */}
               <a
-                href="https://drive.google.com/uc?export=download&id=1t2eCpmrhfMNYT-GMr8NI3tbWMVLPsk8-"
+                href="/cv/Salman_Khan_CV.pdf" // Replace with your CV path
                 download
                 className="about-cv-btn"
               >
