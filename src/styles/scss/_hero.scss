@@ -1,108 +1,386 @@
+// HeroSection.module.scss - CLEAN VERSION
+
 .hero-section {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  background-color: black;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; // Space between text and image
-  padding: 50px;
-  background-image: url("/images/bghero.jpg"); // Correct path to the image
-  background-size: cover; // Make sure the image covers the section
-  background-position: center; // Center the image
-  background-repeat: no-repeat; // Prevent repeating of the image
-  height: 100vh;
-  margin-top: 50px;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 56px;
+  max-width: 1400px;
+  margin: 56px auto 0 auto;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-    background-size: cover;
+  // 🔥 Background Circles - Ek hi jagah define
+  .hero-bg-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 5px solid rgba(208, 42, 91, 0.1);
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-bg-circle2 {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid rgba(208, 42, 91, 0.07);
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    pointer-events: none;
   }
 }
 
-.text-container {
-  max-width: 50%; // Limit width of text container
-  min-width: 330px; /* Ensure minimum width to accommodate text */
+// 🔥 LEFT SIDE
+.hero-left {
+  flex: 1;
+  z-index: 1;
+  max-width: 55%;
+}
 
-  @media (max-width: 768px) {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
+// 🔥 COMMON STYLES (Base)
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(208, 42, 91, 0.1);
+  border: 1px solid rgba(208, 42, 91, 0.25);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  color: #d02a5b;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
 
-  h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    @media (max-width: 768px) {
-      font-size: 2.5rem; /* Adjust font size for small screens */
-    }
-  }
-
-  .typing-text {
-    font-size: 2.5rem; // Adjust font size
-    font-weight: bolder;
-    color: #e31b6d; // Adjust color as needed
-    white-space: nowrap; // Prevent wrapping
-    overflow: hidden;
-    width: 400px; /* Set a fixed width to prevent shrinking */
-    // text-align: left; /* Ensure text alignment stays consistent */
-
-    @media (max-width: 768px) {
-      font-size: 1.8rem; /* Adjust font size for small screens */
-      width: 100%; /* Allow the text to use full width on smaller screens */
-    }
+  &-dot {
+    width: 8px;
+    height: 8px;
+    background: #d02a5b;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
   }
 }
 
-.contact-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+.hero-heading {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
   color: white;
-  background-color: #e31b6d;
-  border: none;
-  border-radius: 5px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+
+  .pink {
+    color: #d02a5b;
+  }
+}
+
+.hero-typing {
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  color: #d02a5b;
+  margin: 0.75rem 0 1.5rem;
+  min-height: 3rem;
+}
+
+.hero-desc {
+  font-size: clamp(14px, 1.2vw, 17px);
+  color: #888;
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 12px 28px;
+  font-size: clamp(14px, 1vw, 17px);
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #d02a5b;
+  color: white;
+  border: none;
+  font-weight: 500;
 
   &:hover {
-    background-color: #d02a5b;
+    background: #a8214a;
   }
 }
 
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 10px;
-  margin-left: 5px;
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #333;
 
-  .social-icon {
-    font-size: 1.5rem;
-    color: #e31b6d;
-    transition: color 0.3s ease;
+  &:hover {
+    border-color: #d02a5b;
+    color: #d02a5b;
+  }
+}
+
+.hero-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.8rem;
+
+  .hero-social {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    transition: all 0.2s;
 
     &:hover {
+      border-color: #d02a5b;
       color: #d02a5b;
     }
-  }
-  @media (max-width: 768px) {
-    display: flex; // Stack icons vertically on small screens
-    justify-content: center; // Center icons horizontally
-    gap: 10px; // Space between icons
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
   }
 }
 
-.image-container {
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-num {
+      font-size: clamp(1.4rem, 1.8vw, 2rem);
+      font-weight: 700;
+      color: #d02a5b;
+    }
+
+    &-label {
+      font-size: clamp(11px, 0.8vw, 14px);
+      color: #555;
+      white-space: nowrap;
+    }
+  }
+}
+
+// 🔥 RIGHT SIDE
+.hero-right {
+  flex: 0 0 auto;
+  width: clamp(240px, 25vw, 380px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.hero-avatar {
+  width: clamp(200px, 22vw, 340px);
+  height: clamp(200px, 22vw, 340px);
+  border-radius: 50%;
+  border: 4px solid #d02a5b;
+  overflow: hidden;
   position: relative;
-  width: 270px;
-  height: 300px; // Adjust size as needed
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 
-  @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+  .avatar-ring {
+    position: absolute;
+    inset: -18px;
+    border-radius: 50%;
+    border: 2px dashed rgba(208, 42, 91, 0.35);
+    animation: spin 12s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+
+    .avatar-dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #d02a5b;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
-.round-image {
-  border-radius: 30%;
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ============================================
+// 🔥 SIRF 4 MEDIA QUERIES - SAB KAAM HO JAYEGA
+// ============================================
+
+// 1️⃣ 24-inch LCD (1920x1080)
+@media (min-width: 1600px) {
+  .hero-section {
+    padding: 3rem 6rem;
+    gap: 4rem;
+    max-width: 1500px;
+  }
+
+  .hero-left {
+    max-width: 50%;
+  }
+}
+
+// 2️⃣ Laptop / Normal Desktop
+@media (max-width: 1400px) {
+  .hero-section {
+    padding: 2rem 4rem;
+    gap: 3rem;
+    max-width: 1200px;
+  }
+
+  .hero-left {
+    max-width: 58%;
+  }
+}
+
+// 3️⃣ Tablet
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 2rem 3rem;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-left {
+    max-width: 58%;
+  }
+}
+
+// 4️⃣ Mobile
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    gap: 2rem;
+    min-height: calc(100vh - 56px);
+    max-width: 100%;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-tag,
+  .hero-actions,
+  .hero-socials,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-bg-circle,
+  .hero-bg-circle2 {
+    display: none;
+  }
+
+  .hero-typing .Typewriter__wrapper {
+    white-space: normal !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+
+    .btn-primary,
+    .btn-outline {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// Extra small mobile
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+
+    .hero-stat-num {
+      font-size: 1.2rem;
+    }
+
+    .hero-stat-label {
+      font-size: 10px;
+    }
+  }
 }
