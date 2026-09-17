@@ -77,11 +77,11 @@ function About() {
                   I'm Salman Khan — an IT Professional and Front-End Web
                   Developer based in Karachi, Pakistan. I don't just fix systems
                   or build websites — I do both, and I do them well. <br />
-                  With 3+ years in IT infrastructure and hands-on experience as
-                  a Front-End Developer, I bring a rare combination of skills to
-                  the table. Whether it's keeping a company's network running at
-                  full speed or shipping a production-ready web application — I
-                  get it done.
+                  With 3+ years in IT infrastructure and 1+ year of hands-on
+                  experience as a Front-End Developer, I bring a rare
+                  combination of skills to the table. Whether it's keeping a
+                  company's network running at full speed or shipping a
+                  production-ready web application — I get it done.
                 </p>
               </div>
 
