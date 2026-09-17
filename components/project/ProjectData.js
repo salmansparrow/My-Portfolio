@@ -5,8 +5,16 @@ import projectImage4 from "/public/images/haircare.png"; // Placeholder for your
 import projectImage6 from "/public/images/vehicleproject.png"; // Placeholder for your project image
 import projectImage5 from "/public/images/tindog.png"; // Placeholder for your project image
 import projectImage7 from "/public/images/tictactoe.png"; // Placeholder for your project image
+import projectImage8 from "/public/images/myrestaurant.png"; // Placeholder for your project image
 
 const projects = [
+  {
+    id: 8,
+    image: projectImage8,
+    siteLink: "https://myrestaurant-chi.vercel.app/",
+    codeLink: "https://github.com/salmansparrow/MyRestaurant",
+    projectname: "My Restaurant",
+  },
   {
     id: 1,
     image: projectImage,
@@ -20,13 +28,6 @@ const projects = [
     siteLink: "https://click-car-loans.vercel.app/",
     codeLink: "https://github.com/salmansparrow/ClickCarLoans",
     projectname: "Click Car Loans",
-  },
-  {
-    id: 3,
-    image: projectImage3,
-    siteLink: "https://salmansparrow.github.io/my-app/",
-    codeLink: "https://github.com/salmansparrow/my-app",
-    projectname: "Text Utills",
   },
   {
     id: 4,
@@ -48,6 +49,13 @@ const projects = [
     siteLink: "https://vehiclesproject.vercel.app/",
     codeLink: "https://github.com/salmansparrow/vehiclesproject",
     projectname: "Vehicles Project",
+  },
+  {
+    id: 3,
+    image: projectImage3,
+    siteLink: "https://salmansparrow.github.io/my-app/",
+    codeLink: "https://github.com/salmansparrow/my-app",
+    projectname: "Text Utills",
   },
   {
     id: 7,
